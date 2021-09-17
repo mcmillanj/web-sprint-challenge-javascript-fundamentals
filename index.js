@@ -66,7 +66,7 @@ const zooAnimals = [
   function animalNames(array)
   {
     const displayNames = [];
-   zooAnimals.forEach(function(items){
+   array.forEach(function(items){
      let returnVariable = `name: ${items.animal_name}, scientific: ${items.scientific_name}`;
 displayNames.push(returnVariable);
    })
@@ -130,16 +130,15 @@ lowerCaseNames(zooAnimals);
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a,b,cb){
+    return cb(a,b);
   }
- 
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(x,y){
+    return x + y;
   }
 
 
