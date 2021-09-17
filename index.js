@@ -80,21 +80,31 @@ displayNames.push(returnVariable);
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
-
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array)
+  {
+   const animalNames = array.map(function(items){
+    return items.animal_name.toLowerCase();
+    //  return animalNames;
+   });
+   return animalNames;
   }
-  
-  
+  //  console.log(lowerCaseNames(zooAnimals));
+lowerCaseNames(zooAnimals);
+
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array)
+  {
+    const animalsGoingExtinct = array.filter(function(items){
+      return items.population < 5;
+
+    });
+    return animalsGoingExtinct;
   }
-  
+  lowPopulationAnimals(zooAnimals);
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
